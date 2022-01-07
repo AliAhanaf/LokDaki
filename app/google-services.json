@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "682590001690",
+    "project_id": "lokdaki-d367f",
+    "storage_bucket": "lokdaki-d367f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682590001690:android:8a4ee2ba9d84c490314fa3",
+        "android_client_info": {
+          "package_name": "com.example.lokdaki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682590001690-4ak2bngdtea7i0ontsngl6csa53c463a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMMrOXkZvFPg-km0aZblRi4D0AV9_uH_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682590001690-4ak2bngdtea7i0ontsngl6csa53c463a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
