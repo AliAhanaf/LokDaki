@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmployerProfile"
+    android:padding="10dp"
+    android:orientation="vertical"
+    >
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NameId"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:hint="Enter Your Name"
+        android:layout_marginTop="250dp"
+        />
+
+<EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddressId"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:hint="Enter Your Address"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PhoneId"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:hint="Enter Your Number"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SavebuttonId"
+        android:text="Save"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+</LinearLayout>
