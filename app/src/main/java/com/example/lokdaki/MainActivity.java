@@ -27,8 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginbutton = findViewById(R.id.mainloginButtonId);
+
         signupbutton = findViewById(R.id.mainSignUpButtonId);
+        loginbutton = findViewById(R.id.mainloginButtonId);
 
         loginbutton.setOnClickListener(this);
         signupbutton.setOnClickListener(this);

@@ -51,7 +51,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.loginMessagetId:
-                Intent loginpage = new Intent(getApplicationContext(),LoginActivity.class);
+                Intent loginpage = new Intent (getApplicationContext(),LoginActivity.class);
                 startActivity(loginpage);
                 break;
         }

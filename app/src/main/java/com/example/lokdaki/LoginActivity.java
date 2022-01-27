@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +28,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         this.setTitle("Login Page");
 
         mAuth = FirebaseAuth.getInstance();
@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
-        if(!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches())
+        if(!Patterns.EMAIL_ADDRESS.matcher(Email).matches())
         {
             loginmail.setError("Enter a valid email address");
             loginmail.requestFocus();
@@ -95,18 +95,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
-                    Intent employerProfile = new Intent(getApplicationContext(),EmployerProfile.class);
-                    employerProfile.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(employerProfile);
+                    Intent employerprofiles = new Intent(getApplicationContext(),EmployerProfile.class);
+                    employerprofiles.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(employerprofiles);
                 }
-
-                else{
-                    Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
+                
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "login unsuccessful", Toast.LENGTH_SHORT).show();
                 }
-
 
             }
         });
+
 
 
     }

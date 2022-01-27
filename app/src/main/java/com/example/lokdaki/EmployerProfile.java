@@ -38,7 +38,6 @@ public class EmployerProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SaveEmployerInfo();
-
             }
         });
     }
@@ -53,7 +52,7 @@ public class EmployerProfile extends AppCompatActivity {
 
         user userinfo = new user(Name,Address,Phone);
         databaseReference.child(key).setValue(userinfo);
-        Toast.makeText(getApplicationContext(), "Information Saved", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Information Saved", Toast.LENGTH_LONG).show();
 
     }
 
@@ -70,8 +69,8 @@ public class EmployerProfile extends AppCompatActivity {
         {
             FirebaseAuth.getInstance().signOut();
             finish();
-            Intent signuppage = new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(signuppage);
+            Intent mainpage = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(mainpage);
         }
 
         return super.onOptionsItemSelected(item);
