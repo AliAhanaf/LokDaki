@@ -5,47 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EmployerProfile"
-    android:padding="10dp"
     android:orientation="vertical"
     >
 
-
-    <EditText
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/NameId"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:hint="Enter Your Name"
-        android:layout_marginTop="250dp"
-        />
+        android:background="#28B8D6">
 
-<EditText
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:src="@mipmap/main_logo" />
+
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/AddressId"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:hint="Enter Your Address"
-        android:layout_marginTop="20dp"
-        />
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/PhoneId"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:hint="Enter Your Number"
-        android:layout_marginTop="20dp"
-        />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/NameId"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:hint="Enter Your Name"
+            android:gravity="center"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AddressId"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:hint="Enter Your Address"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhoneId"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:hint="Enter Your Number"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:id="@+id/SavebuttonId"
         android:text="Save"
+        android:textSize="20sp"
+        android:background="@drawable/button_design"
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
         />
-
-
 
 </LinearLayout>
