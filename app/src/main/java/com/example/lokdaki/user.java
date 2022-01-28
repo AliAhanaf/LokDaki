@@ -6,6 +6,11 @@ public class user {
     private String address;
     private String phone;
 
+    public user()
+    {
+
+    }
+
     public user(String name, String address, String phone) {
         this.name = name;
         this.address = address;

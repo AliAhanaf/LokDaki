@@ -5,75 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EmployerProfile"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-    <RelativeLayout
+
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#28B8D6">
-
-        <ImageView
-            android:id="@+id/main_logo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:src="@mipmap/main_logo" />
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp"
-        >
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/NameId"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:hint="Enter Your Name"
-            android:gravity="center"
-
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/AddressId"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:hint="Enter Your Address"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/PhoneId"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:hint="Enter Your Number"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            />
-
-    </LinearLayout>
+        android:id="@+id/usernameId"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:hint="Name"
+        android:textColor="#000"
+        android:textColorHint="#a9a9a9"
+        android:gravity="center"
+        />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="right"
+        android:id="@+id/imageviewId"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:text="save"
+        android:textSize="10dp"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_gravity="right"
+        android:id="@+id/saveimageId"
+        />
 
     <Button
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/SavebuttonId"
-        android:text="Save"
-        android:textSize="20sp"
-        android:background="@drawable/button_design"
+        android:id="@+id/selectimageId"
         style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        />
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:text="select"
+        android:textSize="7dp" />
+
 
 </LinearLayout>

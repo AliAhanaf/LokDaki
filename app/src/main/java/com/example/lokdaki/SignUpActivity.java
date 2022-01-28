@@ -16,13 +16,20 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText signupmail, signuppass;
     private TextView logintext;
     private Button buttonsignup;
+
+    private EditText employername, employeraddress, employerphone;
+    private Button savebutton;
+
     private FirebaseAuth mAuth;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +38,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         this.setTitle("Sign Up Page");
 
         mAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference("user");
 
         signupmail = findViewById(R.id.SignUpEmailId);
         signuppass = findViewById(R.id.SignUpPasswordId);
@@ -39,6 +47,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         logintext.setOnClickListener(this);
         buttonsignup.setOnClickListener(this);
+
+        employername = findViewById(R.id.NameId);
+        employeraddress = findViewById(R.id.AddressId);
+        employerphone = findViewById(R.id.PhoneId);
     }
 
     @Override
@@ -93,6 +105,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
+
         mAuth.createUserWithEmailAndPassword(Email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -116,6 +129,19 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 }
             }
         });
+
+
+        String Name = employername.getText().toString();
+        String Address = employeraddress.getText().toString();
+        String Phone = employerphone.getText().toString();
+
+        String Key = databaseReference.push().getKey();
+
+        user userinfo = new user(Name,Address,Phone);
+        databaseReference.child(Key).setValue(userinfo);
+
+        System.out.println("Name"+Name);
+
     }
 
 
