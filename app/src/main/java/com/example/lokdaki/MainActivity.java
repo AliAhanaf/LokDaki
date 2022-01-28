@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button loginbutton;
-    private Button signupbutton;
+    private Button signupbutton,workerbutton;
 
 
     @Override
@@ -30,9 +30,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         signupbutton = findViewById(R.id.mainSignUpButtonId);
         loginbutton = findViewById(R.id.mainloginButtonId);
+        workerbutton = findViewById(R.id.workersignupId);
 
         loginbutton.setOnClickListener(this);
         signupbutton.setOnClickListener(this);
+        workerbutton.setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +50,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.mainloginButtonId:
                 Intent loginpage = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(loginpage);
+                break;
+
+            case R.id.workersignupId:
+                Intent workerpage = new Intent(getApplicationContext(),WorkerSignup.class);
+                startActivity(workerpage);
                 break;
         }
 
