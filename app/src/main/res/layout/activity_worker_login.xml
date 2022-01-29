@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:orientation="vertical"
-    tools:context=".SignUpActivity">
+    tools:context=".LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,8 +22,35 @@
             android:layout_marginBottom="30dp"
             android:src="@mipmap/main_logo" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Worker"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="LOK DAKI"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tag_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Every Facility to Doorstep"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#28D6C0"
+        android:gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,23 +58,13 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Workers"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:id="@+id/workersignupemailId"
+            android:id="@+id/workerloginemailId"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:hint="Email"
             android:textColor="#000"
@@ -55,10 +73,10 @@
             />
 
         <EditText
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/workerpasswordId"
+            android:id="@+id/workerloginpasswordId"
             android:inputType="textPassword"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:hint="Password"
@@ -66,66 +84,32 @@
             android:textColor="#000"
             android:gravity="center"
             />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/workernameId"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:layout_marginTop="5dp"
-            android:hint="Enter Your Name"
-            android:gravity="center"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/workerphoneId"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:hint="Enter Your Number"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/professionId"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:hint="Your Profession"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            />
-
-
-
-
-
     </LinearLayout>
 
+
     <Button
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/workerloginbuttonId"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="Login"
+        android:textStyle="bold"
         android:textAllCaps="false"
         android:textSize="20sp"
-        android:layout_marginTop="5dp"
-        android:id="@+id/workersignupbuttonId"
-        style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:text="Sign Up"
         android:background="@drawable/button_design"
+        android:layout_width="380dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
         />
 
     <TextView
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:id="@+id/workerloginmessagetId"
+        android:id="@+id/workersignupessageId"
         android:textColor="#000"
         android:gravity="center"
-        android:layout_marginTop="5dp"
-        android:text="You are already a worker? Login"
+        android:layout_marginTop="30dp"
+        android:text="Want to work with us? Sign Up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
-
 
 </LinearLayout>

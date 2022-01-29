@@ -26,7 +26,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private Button buttonsignup;
 
     private EditText employername, employeraddress, employerphone;
-    private Button savebutton;
 
     private FirebaseAuth mAuth;
     DatabaseReference databaseReference;

@@ -25,24 +25,6 @@
         android:layout_gravity="right"
         android:id="@+id/imageviewId"
         />
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:text="save"
-        android:textSize="10dp"
-        style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:layout_gravity="right"
-        android:id="@+id/saveimageId"
-        />
-
-    <Button
-        android:id="@+id/selectimageId"
-        style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:layout_gravity="right"
-        android:text="select"
-        android:textSize="7dp" />
 
 
 </LinearLayout>

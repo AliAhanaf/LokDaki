@@ -11,8 +11,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -20,8 +18,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -29,37 +25,34 @@ import com.google.firebase.storage.UploadTask;
 
 import java.util.UUID;
 
-public class EmployerProfile extends AppCompatActivity{
+public class WorkerProfile extends AppCompatActivity {
 
-    private EditText username;
-    private ImageView userimage;
+    private ImageView workerpic;
     public Uri imageUri;
     private FirebaseStorage storage;
     private StorageReference storageReference;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_employer_profile);
+        setContentView(R.layout.activity_worker_profile);
+        this.setTitle("LokDaki Worker");
 
-        username = findViewById(R.id.usernameId);
-        userimage = findViewById(R.id.imageviewId);
+        workerpic = findViewById(R.id.workerimageId);
 
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
-        userimage.setOnClickListener(new View.OnClickListener() {
+        workerpic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                chooseimage();
+                selectimage();
             }
         });
 
     }
 
-    private void chooseimage() {
+    private void selectimage() {
         Intent imagechose = new Intent();
         imagechose.setType("image/");
         imagechose.setAction(Intent.ACTION_GET_CONTENT);
@@ -72,12 +65,12 @@ public class EmployerProfile extends AppCompatActivity{
         if(requestCode==1 && resultCode==RESULT_OK && data!=null && data.getData()!=null)
         {
             imageUri = data.getData();
-            userimage.setImageURI(imageUri);
-            uploadimage();
+            workerpic.setImageURI(imageUri);
+            uploadpicture();
         }
     }
 
-    private void uploadimage() {
+    private void uploadpicture() {
 
         final ProgressDialog pd = new ProgressDialog(this);
         pd.setTitle("Uploading Image");
@@ -85,7 +78,7 @@ public class EmployerProfile extends AppCompatActivity{
 
 
         final String randomKey = UUID.randomUUID().toString();
-        StorageReference riversRef = storageReference.child("userimages/" + randomKey);
+        StorageReference riversRef = storageReference.child("workerimages/" + randomKey);
 
         riversRef.putFile(imageUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -112,7 +105,6 @@ public class EmployerProfile extends AppCompatActivity{
 
 
     }
-
 
 
     @Override

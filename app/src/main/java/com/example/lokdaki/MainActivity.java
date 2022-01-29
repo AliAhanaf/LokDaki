@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         signupbutton = findViewById(R.id.mainSignUpButtonId);
         loginbutton = findViewById(R.id.mainloginButtonId);
-        workerbutton = findViewById(R.id.workersignupId);
+        workerbutton = findViewById(R.id.workerjoinId);
 
         loginbutton.setOnClickListener(this);
         signupbutton.setOnClickListener(this);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(loginpage);
                 break;
 
-            case R.id.workersignupId:
+            case R.id.workerjoinId:
                 Intent workerpage = new Intent(getApplicationContext(),WorkerSignup.class);
                 startActivity(workerpage);
                 break;
