@@ -17,15 +17,18 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class WorkerSignup extends AppCompatActivity implements View.OnClickListener {
 
     private EditText Wsignupmail, Wsignuppass;
     private TextView Wlogintext;
     private Button Wbuttonsignup;
-    private EditText workername, employerphone, profession;
+    private EditText workername, workerphone, profession;
 
     private FirebaseAuth mAuth;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class WorkerSignup extends AppCompatActivity implements View.OnClickListe
         this.setTitle("Workers Sign Up Page");
 
         mAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference("workers");
 
         Wsignupmail = findViewById(R.id.workersignupemailId);
         Wsignuppass = findViewById(R.id.workerpasswordId);
@@ -41,7 +45,7 @@ public class WorkerSignup extends AppCompatActivity implements View.OnClickListe
         Wbuttonsignup = findViewById(R.id.workersignupbuttonId);
 
         workername = findViewById(R.id.workernameId);
-        employerphone = findViewById(R.id.workerphoneId);
+        workerphone = findViewById(R.id.workerphoneId);
         profession = findViewById(R.id.professionId);
 
         Wlogintext.setOnClickListener(this);
@@ -128,19 +132,17 @@ public class WorkerSignup extends AppCompatActivity implements View.OnClickListe
         });
 
 
+        String wName = workername.getText().toString();
+        String wPhone = workerphone.getText().toString();
+        String wProfession = profession.getText().toString();
+
+        String key = databaseReference.push().getKey();
+
+        workers workerinfo = new workers(wName,wPhone,wProfession);
+        databaseReference.child(key).setValue(workerinfo);
+
 
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
