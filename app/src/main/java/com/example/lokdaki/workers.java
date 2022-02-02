@@ -4,6 +4,9 @@ public class workers {
     private String Wname,Wphone,profession;
 
 
+    public workers() {
+    }
+
     public workers(String wname, String wphone, String profession) {
         this.Wname = wname;
         this.Wphone = wphone;
@@ -11,12 +14,10 @@ public class workers {
     }
 
 
-    public String getWname() {
-        return Wname;
-    }
+    public String getWname() { return Wname; }
 
     public void setWname(String wname) {
-        Wname = wname;
+        this.Wname = wname;
     }
 
     public String getWphone() {
@@ -24,7 +25,7 @@ public class workers {
     }
 
     public void setWphone(String wphone) {
-        Wphone = wphone;
+        this.Wphone = wphone;
     }
 
     public String getProfession() {

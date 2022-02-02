@@ -106,11 +106,19 @@ public class WorkerSignup extends AppCompatActivity implements View.OnClickListe
         }
 
 
-
         mAuth.createUserWithEmailAndPassword(wEmail,wPass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+
+                    String wName = workername.getText().toString();
+                    String wPhone = workerphone.getText().toString();
+                    String wProfession = profession.getText().toString();
+
+                    String key = databaseReference.push().getKey();
+                    workers workerinfo = new workers(wName,wPhone,wProfession);
+                    databaseReference.child(key).setValue(workerinfo);
+
                     finish();
                     Intent workerprofile = new Intent(getApplicationContext(),WorkerProfile.class);
                     workerprofile.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -132,14 +140,14 @@ public class WorkerSignup extends AppCompatActivity implements View.OnClickListe
         });
 
 
-        String wName = workername.getText().toString();
+       /* String wName = workername.getText().toString();
         String wPhone = workerphone.getText().toString();
         String wProfession = profession.getText().toString();
 
         String key = databaseReference.push().getKey();
 
         workers workerinfo = new workers(wName,wPhone,wProfession);
-        databaseReference.child(key).setValue(workerinfo);
+        databaseReference.child(key).setValue(workerinfo);*/
 
 
     }
