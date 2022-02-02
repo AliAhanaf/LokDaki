@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <EditText
             android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             />
 
         <EditText
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/SignUpPasswordId"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/NameId"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:hint="Enter Your Name"
             android:gravity="center"
             />
@@ -73,7 +73,7 @@
             android:id="@+id/AddressId"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:hint="Enter Your Address"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             />
 
@@ -83,7 +83,7 @@
             android:id="@+id/PhoneId"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:hint="Enter Your Number"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             />
 
