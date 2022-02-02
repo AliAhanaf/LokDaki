@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,7 +29,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private EditText employername, employeraddress, employerphone;
 
     private FirebaseAuth mAuth;
-    DatabaseReference databaseReference;
+    private DatabaseReference mFirebaseDatabase;
+    private FirebaseDatabase mFirebaseInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         this.setTitle("Sign Up Page");
 
         mAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference("user");
+
+        mFirebaseInstance = FirebaseDatabase.getInstance("https://lokdaki-d367f-default-rtdb.asia-southeast1.firebasedatabase.app");
+        mFirebaseDatabase = mFirebaseInstance.getReference("user");
 
         signupmail = findViewById(R.id.SignUpEmailId);
         signuppass = findViewById(R.id.SignUpPasswordId);
@@ -103,12 +107,18 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             signuppass.requestFocus();
             return;
         }
-
-
         mAuth.createUserWithEmailAndPassword(Email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+
+                    String Name = employername.getText().toString();
+                    String Address = employeraddress.getText().toString();
+                    String Phone = employerphone.getText().toString();
+
+                    String testKey = mFirebaseDatabase.push().getKey();
+                    UserClass userinfo = new UserClass(Name,Address,Phone);
+                    mFirebaseDatabase.child(testKey).setValue(userinfo);
                     finish();
                     Intent Employerprofile = new Intent(getApplicationContext(),EmployerProfile.class);
                     Employerprofile.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -121,27 +131,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         Toast.makeText(getApplicationContext(),"User is already Registered",Toast.LENGTH_SHORT).show();
                     }
                     else
-                        {
-                            Toast.makeText(getApplicationContext(),"Error : "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                    {
+                        Toast.makeText(getApplicationContext(),"Error : "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                     }
 
                 }
             }
         });
-
-
-        String Name = employername.getText().toString();
-        String Address = employeraddress.getText().toString();
-        String Phone = employerphone.getText().toString();
-
-        String Key = databaseReference.push().getKey();
-
-        user userinfo = new user(Name,Address,Phone);
-        databaseReference.child(Key).setValue(userinfo);
-
-        System.out.println("Name"+Name);
-
     }
-
-
 }

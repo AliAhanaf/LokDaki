@@ -1,17 +1,17 @@
 package com.example.lokdaki;
 
-public class user {
+public class UserClass {
 
     private String name;
     private String address;
     private String phone;
 
-    public user()
+    public UserClass()
     {
 
     }
 
-    public user(String name, String address, String phone) {
+    public UserClass(String name, String address, String phone) {
         this.name = name;
         this.address = address;
         this.phone = phone;

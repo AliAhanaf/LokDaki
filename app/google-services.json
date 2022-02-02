@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "682590001690",
+    "firebase_url": "https://lokdaki-d367f-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "lokdaki-d367f",
     "storage_bucket": "lokdaki-d367f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:682590001690:android:8a4ee2ba9d84c490314fa3",
+        "mobilesdk_app_id": "1:682590001690:android:eb8cc77c267604f8314fa3",
         "android_client_info": {
           "package_name": "com.example.lokdaki"
         }
