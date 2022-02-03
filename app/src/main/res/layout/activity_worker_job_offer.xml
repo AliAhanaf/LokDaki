@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/emp_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/profile" />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Full Name"
+            android:textSize="35sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/check_Work"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="New Work Request"
+        android:background="@drawable/button_design"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emp_fName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" Employer : Full Name"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/emp_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Address : Khamarbari"
+            android:layout_marginTop="20dp"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/emp_phn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Phone : 01*********"
+            android:layout_marginTop="20dp"
+            android:textSize="35sp" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/accept_work"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="Accept New Work"
+        android:background="@drawable/accept"
+        />
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/reject_work"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="Reject New Work"
+        android:background="@drawable/reject"
+        />
+
+</LinearLayout>

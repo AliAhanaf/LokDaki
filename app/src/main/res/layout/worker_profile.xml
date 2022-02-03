@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/emp_purno"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ratings: 4.8/5"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#00C853"/>
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/daysWorked"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="300 days with LokDaki"
+        android:background="@drawable/button_design"
+        />
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/workSuccess"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="35 Successful Works"
+        android:background="@drawable/button_design"
+        />
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/amountEarned"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="TK 10000 Earned"
+        android:background="@drawable/button_design"
+        />
+
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="80dp"
+        android:id="@+id/newReq"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="New Work Request"
+        android:background="@drawable/accept"
+        />
+
+</LinearLayout>

@@ -8,11 +8,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/main_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/main_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.LokDaki">
+        <activity
+            android:name=".WorkerList"
+            android:exported="false" />
         <activity
             android:name=".WorkerProfile"
             android:exported="false" />
@@ -40,6 +43,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".load_employer_data" />
     </application>
 
 </manifest>

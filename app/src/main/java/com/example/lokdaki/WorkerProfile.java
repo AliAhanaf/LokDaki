@@ -35,7 +35,7 @@ public class WorkerProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_worker_profile);
+        setContentView(R.layout.activity_worker_job_offer);
         this.setTitle("LokDaki Worker");
 
         workerpic = findViewById(R.id.workerimageId);

@@ -36,6 +36,7 @@ public class EmployerProfile extends AppCompatActivity{
     public Uri imageUri;
     private FirebaseStorage storage;
     private StorageReference storageReference;
+    private DatabaseReference root = FirebaseDatabase.getInstance().getReference();
 
 
     @Override
@@ -89,6 +90,7 @@ public class EmployerProfile extends AppCompatActivity{
 
         riversRef.putFile(imageUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    /*New Code*/
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         pd.dismiss();

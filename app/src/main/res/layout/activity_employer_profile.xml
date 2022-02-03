@@ -5,26 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EmployerProfile"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginTop="80dp">
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/usernameId"
         android:layout_marginTop="20dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:hint="Name"
+        android:hint="Add Profile Picture"
         android:textColor="#000"
         android:textColorHint="#a9a9a9"
         android:gravity="center"
         />
+
     <ImageView
+        android:layout_marginTop="15dp"
+        android:id="@+id/imageviewId"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="right"
-        android:id="@+id/imageviewId"
-        />
+        android:src="@mipmap/add_user"
+        android:layout_gravity="center" />
 
+    <Button
+        android:id="@+id/nxt_page"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_design"
+        android:layout_height="wrap_content"
+        android:text="Done"/>
 
 </LinearLayout>

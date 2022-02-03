@@ -4,112 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    tools:context=".EmployerProfile"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#28B8D6">
-
-        <ImageView
-            android:id="@+id/main_logo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:src="@mipmap/main_logo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Worker"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-    </RelativeLayout>
+    android:layout_marginTop="80dp">
 
 
     <TextView
-        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/usernameId"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:hint="Add Profile Picture"
+        android:textColor="#000"
+        android:textColorHint="#a9a9a9"
         android:gravity="center"
-        android:text="LOK DAKI"
-        android:textColor="@color/black"
-        android:textSize="36sp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/tag_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Every Facility to Doorstep"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#28D6C0"
-        android:gravity="center"/>
+        />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:id="@+id/workerloginemailId"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="20dp"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:hint="Email"
-            android:textColor="#000"
-            android:textColorHint="#a9a9a9"
-            android:gravity="center"
-            />
-
-        <EditText
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/workerloginpasswordId"
-            android:inputType="textPassword"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:hint="Password"
-            android:textColorHint="#a9a9a9"
-            android:textColor="#000"
-            android:gravity="center"
-            />
-    </LinearLayout>
-
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:id="@+id/imageviewId"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/add_user"
+        android:layout_gravity="center" />
 
     <Button
-        android:layout_marginTop="20dp"
-        android:id="@+id/workerloginbuttonId"
-        style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:text="Login"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:background="@drawable/button_design"
-        android:layout_width="380dp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        />
-
-    <TextView
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:id="@+id/workersignupessageId"
-        android:textColor="#000"
-        android:gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="Want to work with us? Sign Up"
+        android:id="@+id/nxt_page1"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_design"
         android:layout_height="wrap_content"
-        />
+        android:text="Done"/>
 
 </LinearLayout>
